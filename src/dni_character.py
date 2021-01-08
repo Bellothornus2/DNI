@@ -10,7 +10,7 @@ class DniCharacter:
         "7":"F",
         "8":"P",
         "9":"D",
-        "10":"N",
+        "10":"X",
         "11":"B",
         "12":"N",
         "13":"J",
@@ -24,4 +24,13 @@ class DniCharacter:
         "21":"K",
         "22":"E"
     }
-    
+    nie_table = {
+        "X":"0",
+        "Y":"1",
+        "Z":"2"
+    }
+    @staticmethod
+    def nie_converter(dni_object):
+        nie_character_value = DniCharacter.nie_table[dni_object.string_dni[0]]
+        nie = nie_character_value + dni_object.string_dni[1:]
+        return nie
